@@ -1,0 +1,140 @@
+{
+  "updatedAt": "2026-06-01T10:00:00+08:00",
+  "unit": {
+    "id": "nthu",
+    "name": "台湾 国立清华大学",
+    "campus": "校本部",
+    "address": "台湾新竹市东区光复路二段101号",
+    "center": {
+      "lng": 120.9967,
+      "lat": 24.7961
+    },
+    "mapProvider": "mock-amap-compatible"
+  },
+  "places": [
+    {
+      "id": "library",
+      "name": "旺宏馆",
+      "type": "indoor",
+      "category": "室内场所",
+      "position": { "x": 45, "y": 28, "w": 18, "h": 16 },
+      "floors": [
+        {
+          "id": "library-b1",
+          "label": "B1",
+          "name": "旺宏馆 B1",
+          "devices": [
+            { "id": "cam-lib-b1-01", "name": "B1 北侧摄像头", "type": "camera", "status": "normal", "x": 34, "y": 38 },
+            { "id": "access-lib-b1-01", "name": "B1 设备间门禁", "type": "access", "status": "abnormal", "x": 72, "y": 64 }
+          ]
+        },
+        {
+          "id": "library-1f",
+          "label": "1F",
+          "name": "旺宏馆 1F",
+          "devices": [
+            { "id": "cam-lib-1f-01", "name": "一层大厅摄像头", "type": "camera", "status": "normal", "x": 25, "y": 46 },
+            { "id": "access-lib-1f-01", "name": "正门门禁", "type": "access", "status": "normal", "x": 50, "y": 82 },
+            { "id": "access-lib-1f-02", "name": "西侧门禁", "type": "access", "status": "abnormal", "x": 13, "y": 58 }
+          ]
+        },
+        {
+          "id": "library-2f",
+          "label": "2F",
+          "name": "旺宏馆 2F",
+          "devices": [
+            { "id": "cam-lib-2f-01", "name": "二层阅览区摄像头", "type": "camera", "status": "normal", "x": 62, "y": 42 },
+            { "id": "light-lib-2f-01", "name": "二层通道照明", "type": "light", "status": "normal", "x": 41, "y": 35 },
+            { "id": "cam-lib-2f-02", "name": "二层南侧摄像头", "type": "camera", "status": "abnormal", "x": 78, "y": 69 }
+          ]
+        },
+        {
+          "id": "library-4f",
+          "label": "4F",
+          "name": "旺宏馆 4F",
+          "devices": [
+            { "id": "cam-lib-4f-01", "name": "四层自习区摄像头", "type": "camera", "status": "normal", "x": 30, "y": 32 },
+            { "id": "access-lib-4f-01", "name": "四层档案室门禁", "type": "access", "status": "normal", "x": 69, "y": 47 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teaching-a",
+      "name": "工程一馆",
+      "type": "indoor",
+      "category": "室内场所",
+      "position": { "x": 20, "y": 34, "w": 16, "h": 20 },
+      "floors": [
+        {
+          "id": "teaching-a-1f",
+          "label": "1F",
+          "name": "工程一馆 1F",
+          "devices": [
+            { "id": "access-tea-1f-01", "name": "工程一馆东门门禁", "type": "access", "status": "normal", "x": 78, "y": 53 },
+            { "id": "cam-tea-1f-01", "name": "大厅摄像头", "type": "camera", "status": "normal", "x": 48, "y": 30 }
+          ]
+        },
+        {
+          "id": "teaching-a-3f",
+          "label": "3F",
+          "name": "工程一馆 3F",
+          "devices": [
+            { "id": "cam-tea-3f-01", "name": "三层走廊摄像头", "type": "camera", "status": "abnormal", "x": 37, "y": 50 },
+            { "id": "light-tea-3f-01", "name": "三层走廊照明", "type": "light", "status": "normal", "x": 59, "y": 51 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lab-center",
+      "name": "台达馆",
+      "type": "indoor",
+      "category": "室内场所",
+      "position": { "x": 67, "y": 42, "w": 16, "h": 18 },
+      "floors": [
+        {
+          "id": "lab-center-1f",
+          "label": "1F",
+          "name": "台达馆 1F",
+          "devices": [
+            { "id": "access-lab-1f-01", "name": "台达馆入口门禁", "type": "access", "status": "normal", "x": 48, "y": 80 },
+            { "id": "cam-lab-1f-01", "name": "样品间摄像头", "type": "camera", "status": "normal", "x": 32, "y": 36 }
+          ]
+        },
+        {
+          "id": "lab-center-2f",
+          "label": "2F",
+          "name": "台达馆 2F",
+          "devices": [
+            { "id": "cam-lab-2f-01", "name": "二层公共区摄像头", "type": "camera", "status": "normal", "x": 57, "y": 41 },
+            { "id": "access-lab-2f-01", "name": "危化品库门禁", "type": "access", "status": "abnormal", "x": 75, "y": 35 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sports-field",
+      "name": "综合体育馆户外区",
+      "type": "outdoor",
+      "category": "户外场所",
+      "position": { "x": 57, "y": 65, "w": 28, "h": 18 },
+      "devices": [
+        { "id": "cam-field-01", "name": "体育馆北侧摄像头", "type": "camera", "status": "normal", "x": 62, "y": 67 },
+        { "id": "light-field-01", "name": "跑道 1 号路灯", "type": "light", "status": "normal", "x": 67, "y": 79 },
+        { "id": "light-field-02", "name": "跑道 2 号路灯", "type": "light", "status": "abnormal", "x": 81, "y": 68 }
+      ]
+    },
+    {
+      "id": "east-gate",
+      "name": "光复路校门",
+      "type": "outdoor",
+      "category": "户外场所",
+      "position": { "x": 87, "y": 42, "w": 7, "h": 12 },
+      "devices": [
+        { "id": "cam-gate-01", "name": "光复路校门入口摄像头", "type": "camera", "status": "normal", "x": 89, "y": 46 },
+        { "id": "access-gate-01", "name": "光复路校门车行门禁", "type": "access", "status": "normal", "x": 91, "y": 51 }
+      ]
+    }
+  ]
+}

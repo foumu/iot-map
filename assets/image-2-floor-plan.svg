@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" aria-label="模拟后台上传的楼层平面图">
+  <defs>
+    <pattern id="paper-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#e7e3d8" stroke-width="1"/>
+    </pattern>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#2c3b45" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="680" fill="#fbfaf5"/>
+  <rect width="1000" height="680" fill="url(#paper-grid)" opacity=".68"/>
+
+  <g filter="url(#soft-shadow)">
+    <path d="M118 92H828V192H902V320H842V558H112V452H74V236H118Z" fill="#fffefa" stroke="#3f4c55" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M118 236H842" stroke="#3f4c55" stroke-width="7"/>
+    <path d="M118 452H842" stroke="#3f4c55" stroke-width="7"/>
+    <path d="M318 92V236M542 92V236M720 92V236" stroke="#3f4c55" stroke-width="6"/>
+    <path d="M258 236V452M452 236V452M650 236V452" stroke="#3f4c55" stroke-width="6"/>
+    <path d="M312 452V558M492 452V558M688 452V558" stroke="#3f4c55" stroke-width="6"/>
+    <path d="M74 344H258M650 344H842" stroke="#3f4c55" stroke-width="6"/>
+    <path d="M842 192V320" stroke="#3f4c55" stroke-width="6"/>
+  </g>
+
+  <g fill="#f4f6f3" stroke="#b8c1bd" stroke-width="2">
+    <rect x="138" y="112" width="160" height="104" rx="4"/>
+    <rect x="338" y="112" width="184" height="104" rx="4"/>
+    <rect x="562" y="112" width="138" height="104" rx="4"/>
+    <rect x="738" y="112" width="70" height="104" rx="4"/>
+    <rect x="104" y="260" width="132" height="160" rx="4"/>
+    <rect x="286" y="260" width="142" height="160" rx="4"/>
+    <rect x="680" y="260" width="132" height="160" rx="4"/>
+    <rect x="132" y="474" width="150" height="62" rx="4"/>
+    <rect x="522" y="474" width="142" height="62" rx="4"/>
+    <rect x="714" y="474" width="104" height="62" rx="4"/>
+  </g>
+
+  <g fill="#dce8ef" stroke="#8ba3ad" stroke-width="2">
+    <path d="M456 266H624V420H456Z"/>
+    <path d="M492 300H588M492 334H588M492 368H588" stroke="#8ba3ad" stroke-width="3"/>
+  </g>
+
+  <g fill="#eff4e8" stroke="#9aaa93" stroke-width="2">
+    <rect x="328" y="472" width="144" height="64" rx="4"/>
+    <path d="M356 486h88M356 506h88M356 526h88" stroke="#9aaa93" stroke-width="2"/>
+  </g>
+
+  <g fill="#3f4c55" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" opacity=".62">
+    <text x="174" y="173">研讨室</text>
+    <text x="386" y="173">开放办公</text>
+    <text x="586" y="173">会议室</text>
+    <text x="136" y="346">大厅</text>
+    <text x="318" y="346">资料室</text>
+    <text x="494" y="348">中庭</text>
+    <text x="704" y="346">实验区</text>
+    <text x="350" y="512">楼梯/电梯</text>
+    <text x="548" y="512">机房</text>
+    <text x="736" y="512">库房</text>
+  </g>
+
+  <g stroke="#6f7b82" stroke-width="4" stroke-linecap="round">
+    <path d="M260 236v38M452 328h38M650 330h-40M492 452v-38M842 262h-42"/>
+    <path d="M318 182h-36M542 182h-34M720 182h-30M312 506h-30M688 506h-26"/>
+  </g>
+
+  <g fill="none" stroke="#c78355" stroke-width="5" stroke-linecap="round" opacity=".7">
+    <path d="M74 344c42-16 76-16 118 0"/>
+    <path d="M842 260c34 24 36 48 0 72"/>
+  </g>
+
+  <text x="124" y="620" fill="#8a948e" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700">image-2 上传平面图模拟稿</text>
+  <text x="712" y="620" fill="#a1aaa5" font-family="SF Mono, Menlo, monospace" font-size="14">1000 x 680</text>
+</svg>
