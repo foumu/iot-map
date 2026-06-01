@@ -16,3 +16,4 @@ All notable changes to this project will be documented here.
 - Pan, wheel zoom, zoom buttons, and reset view controls.
 - 4K-friendly floor plan fitting behavior.
 - Project documentation, roadmap, changelog, contribution guide, screenshot, and GitHub Pages publishing notes.
+- Repository health files for issue reports, feature requests, pull requests, support, security, and community conduct.

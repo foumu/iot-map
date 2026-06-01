@@ -9,6 +9,8 @@ This roadmap focuses on turning the demo into a more reusable open-source refere
 - Add keyboard-accessible navigation for map markers and floor buttons.
 - Add more realistic uploaded floor plan examples.
 - Add screenshots for unit plan, outdoor place, and indoor floor views.
+- Publish the demo through GitHub Pages and link it from the repository homepage.
+- Add the first GitHub release for version `0.1.0`.
 
 ## Mid Term
 

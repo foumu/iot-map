@@ -22,4 +22,8 @@ API credits would be used to improve the open-source project by generating riche
 
 ## Additional context
 
-The repository currently includes a working static demo, mock API data, a floor plan asset, documentation, roadmap, changelog, contribution guide, and GitHub Pages deployment workflow. Future work will focus on accessibility, filtering, URL state, multiple campuses, real map provider integration, and more realistic uploaded floor plan examples.
+The repository currently includes a working static demo, mock API data, a floor plan asset, screenshots, documentation, roadmap, changelog, contribution guide, issue templates, pull request template, security policy, support notes, and code of conduct. Future work will focus on accessibility, filtering, URL state, multiple campuses, real map provider integration, and more realistic uploaded floor plan examples.
+
+## Student / education context
+
+I am a student developer and the primary maintainer of this repository. I am building the project as an open-source learning and reference resource for smart campus, IoT visualization, and facility map interfaces. The project is useful for students and frontend developers who need a concrete demo of campus maps, building footprints, indoor floor plans, and IoT device status displays without setting up a backend first.

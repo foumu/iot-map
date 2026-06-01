@@ -2,7 +2,13 @@
 
 一个面向智慧校园、园区运维和物联网设备监控场景的前端 demo。项目用静态 JSON 模拟接口数据，展示从单位地图、场所平面图、楼层平面图到设备点位状态的逐级交互。
 
-![IoT Campus Map overview](docs/screenshots/overview.jpg)
+![IoT Campus Map overview](docs/screenshots/map-overview.jpg)
+
+## Project Status
+
+This repository is maintained as an early-stage open-source reference implementation. The current focus is to make the demo easy to inspect, reuse, and extend before adding heavier framework or backend dependencies.
+
+Maintainer: [foumu](https://github.com/foumu)
 
 ## Online Demo
 
@@ -24,6 +30,20 @@ GitHub Pages 发布后可访问：
 - Device status color coding: green for normal, red for abnormal
 - Mock API data served from `data/iot-map.json`
 - Responsive layout tuned for desktop and 4K preview
+
+## Screenshots
+
+| Unit map | Unit plan | Floor plan |
+| --- | --- | --- |
+| ![Unit map](docs/screenshots/map-overview.jpg) | ![Unit plan](docs/screenshots/unit-plan.jpg) | ![Floor plan](docs/screenshots/floor-plan.jpg) |
+
+## Use Cases
+
+- Smart campus and university facility demos
+- IoT device monitoring prototypes
+- Building operations and safety dashboards
+- Indoor floor plan navigation experiments
+- Student projects for frontend, GIS-style UI, and smart facility topics
 
 ## Interaction Flow
 
@@ -82,12 +102,16 @@ Then open:
 ├── data/
 │   └── iot-map.json               # Mock API response
 ├── docs/
-│   └── screenshots/overview.jpg   # Project preview screenshot
+│   ├── open-source-application.md # Codex for Open Source form notes
+│   └── screenshots/               # Project preview screenshots
 ├── index.html                     # Static page shell
 ├── styles.css                     # Layout and visual system
 ├── ROADMAP.md                     # Planned improvements
 ├── CHANGELOG.md                   # Release history
-└── CONTRIBUTING.md                # Contribution guide
+├── CONTRIBUTING.md                # Contribution guide
+├── SECURITY.md                    # Security policy
+├── SUPPORT.md                     # Support notes
+└── CODE_OF_CONDUCT.md             # Community conduct
 ```
 
 ## Open Source Application Notes
@@ -102,6 +126,14 @@ This repository is an early-stage open-source demo for smart campus and IoT visu
 Suggested application text for Codex for Open Source is available in:
 
 [docs/open-source-application.md](docs/open-source-application.md)
+
+## Repository Health
+
+- MIT licensed
+- Contribution guide included
+- Roadmap and changelog included
+- Security policy included
+- Issue and pull request templates included
 
 ## License
 
