@@ -1,161 +1,160 @@
-# IoT Campus Map Demo
+# 物联网校园地图演示项目
 
-一个面向智慧校园、园区运维和物联网设备监控场景的前端 demo。项目用静态 JSON 模拟接口数据，展示从单位地图、场所平面图、楼层平面图到设备点位状态的逐级交互。
+这是一个面向智慧校园、园区运维和物联网设备监控场景的前端演示项目。我把它设计成一个从“地图展示”到“后台数据维护”的完整闭环：管理端维护单位、场所、楼层和设备数据，展示端通过模拟 API 读取同一份数据并渲染地图、平面图和设备状态。
 
-![IoT Campus Map overview](docs/screenshots/map-overview.jpg)
+![物联网校园地图总览](docs/screenshots/map-overview.jpg)
 
-## Project Status
+## 项目状态
 
-This repository is maintained as an early-stage open-source reference implementation. The current focus is to make the demo easy to inspect, reuse, and extend before adding heavier framework or backend dependencies.
+本项目目前是一个早期开源参考实现，重点是让智慧校园和物联网地图类界面的核心交互可以被快速查看、复用和扩展。在引入真实后端、数据库或地图厂商接口之前，先用静态页面、模拟 API 和浏览器本地存储把业务逻辑跑通。
 
-Maintainer: [foumu](https://github.com/foumu)
+维护者：[foumu](https://github.com/foumu)
 
-## Online Demo
-
-GitHub Pages 发布后可访问：
+## 在线演示
 
 [https://foumu.github.io/iot-map/](https://foumu.github.io/iot-map/)
 
-如果 Pages 还未启用，可在仓库 `Settings -> Pages` 中选择 `Deploy from a branch`，然后选择 `main` 分支和 `/root` 目录。
+## 功能特性
 
-## Features
+- 若依风格管理端，支持单位、场所、楼层和设备数据维护
+- 展示端和管理端共用 `mock-api.js`，数据写入浏览器 `localStorage`
+- 初始数据来自 `data/iot-map.json`，便于后续替换成真实后端接口
+- 第一层以模拟单位“台湾 国立清华大学”为中心展示地图
+- 点击单位标记进入单位平面图，展示场所轮廓和户外设备
+- 场所轮廓使用不规则建筑形状，避免规则矩形带来的虚假感
+- 支持室内场所和户外场所两类业务对象
+- 室内场所支持楼层切换和楼层平面图展示
+- 户外场所不划分楼层，设备直接标注在场所平面图中
+- 设备类型包含视频摄像头、路灯、门禁
+- 设备状态用绿色表示正常、红色表示异常
+- 地图、单位平面图和楼层平面图支持拖拽、滚轮缩放、重置视图
+- 布局已针对桌面端和 4K 预览做过适配
 
-- RuoYi-style management console for unit, place, floor, and device data
-- Mock API layer backed by browser localStorage with JSON seed fallback
-- Unit-level map centered on a simulated campus: `台湾 国立清华大学`
-- Clickable campus marker and full clickable tooltip area
-- Building-like irregular place footprints instead of fake rectangular blocks
-- Indoor and outdoor place navigation
-- Indoor floor switching with highlighted active floor
-- Floor plan rendering with pan and wheel zoom
-- Device markers for cameras, street lights, and access control
-- Device status color coding: green for normal, red for abnormal
-- Mock API data served from `data/iot-map.json`
-- Responsive layout tuned for desktop and 4K preview
+## 界面截图
 
-## Screenshots
-
-| Unit map | Unit plan | Floor plan |
+| 单位地图 | 单位平面图 | 楼层平面图 |
 | --- | --- | --- |
-| ![Unit map](docs/screenshots/map-overview.jpg) | ![Unit plan](docs/screenshots/unit-plan.jpg) | ![Floor plan](docs/screenshots/floor-plan.jpg) |
+| ![单位地图](docs/screenshots/map-overview.jpg) | ![单位平面图](docs/screenshots/unit-plan.jpg) | ![楼层平面图](docs/screenshots/floor-plan.jpg) |
 
-## Use Cases
+## 适用场景
 
-- Smart campus and university facility demos
-- IoT device monitoring prototypes
-- Building operations and safety dashboards
-- Indoor floor plan navigation experiments
-- Student projects for frontend, GIS-style UI, and smart facility topics
+- 智慧校园可视化原型
+- 园区物联网设备监控演示
+- 楼宇运维和安防态势展示
+- 室内平面图与楼层切换交互验证
+- 前端、地理信息界面、物联网方向的课程或学生项目
 
-## Interaction Flow
+## 展示端交互流程
 
-1. The first layer shows the unit map centered on National Tsing Hua University.
-2. Click the unit marker to enter the unit plan view.
-3. Click a place footprint on the unit plan.
-4. If the place is indoor, switch floors from the left floating rail.
-5. View devices on each floor or directly on outdoor places.
-6. Click any device marker to inspect its type, status, and location details.
+1. 打开展示页后，默认显示单位地图。
+2. 点击单位标记，进入单位平面图。
+3. 在单位平面图中点击场所轮廓，进入对应场所。
+4. 如果场所是室内场所，左侧显示楼层切换组件。
+5. 切换楼层后，楼层平面图和设备点位同步更新。
+6. 点击设备点位，可以查看设备类型、状态、编号、型号和维护人。
 
-## Management Console
+## 管理端
 
-Open the RuoYi-style management console:
+管理端入口：
 
 [http://127.0.0.1:4173/admin.html](http://127.0.0.1:4173/admin.html)
 
-Management modules:
+管理端包含以下模块：
 
-- `单位信息管理`: unit name, campus, address, map center, contact, and operating status
-- `场所和楼层管理`: indoor/outdoor places, building-like footprints, floor plan URLs, and floor metadata
-- `设备管理`: cameras, lights, access control devices, status, coordinates, model, maintainer, and online time
-- `数据源管理`: inspect, edit, export, and reset the mock API JSON
+- `单位信息管理`：维护单位名称、校区、地址、地图中心点、联系人和运行状态
+- `场所和楼层管理`：维护室内/户外场所、建筑轮廓、楼层、楼层图纸和楼层面积
+- `设备管理`：维护摄像头、路灯、门禁的所属场所、楼层、坐标、状态、型号和维护信息
+- `数据源管理`：查看、编辑、导出和重置模拟 API 数据
 
-The display page and management console both use `mock-api.js`. The seed data comes from `data/iot-map.json`; management changes are stored in the browser local database through `localStorage`.
+展示端和管理端共用同一层模拟 API。管理端保存后，数据会写入浏览器本地存储；展示端刷新后会读取更新后的数据。
 
-## Device Types
+## 设备类型
 
-| Type | Label | Status |
+| 类型值 | 中文名称 | 状态 |
 | --- | --- | --- |
-| `camera` | 视频摄像头 | Normal / abnormal |
-| `light` | 路灯 | Normal / abnormal |
-| `access` | 门禁 | Normal / abnormal |
+| `camera` | 视频摄像头 | 正常 / 异常 |
+| `light` | 路灯 | 正常 / 异常 |
+| `access` | 门禁 | 正常 / 异常 |
 
-## Data Model
+## 数据模型
 
-The demo reads all business data from:
+初始业务数据位于：
 
 ```text
 data/iot-map.json
 ```
 
-Main entities:
+核心数据对象：
 
-- `unit`: campus name, address, center coordinates, and map provider label
-- `places`: indoor and outdoor places
-- `floors`: floor-level data for indoor places
-- `devices`: IoT markers with type, status, and normalized coordinates
+- `unit`：单位名称、校区、地址、中心经纬度、联系人和地图类型
+- `places`：场所列表，区分室内场所和户外场所
+- `floors`：室内场所的楼层数据，包括楼层名称、排序、面积和图纸地址
+- `devices`：物联网设备数据，包括设备类型、状态、坐标、型号、维护人和在线时间
 
-This keeps the frontend close to a real API integration shape while avoiding backend setup for demo use.
+这套结构接近真实接口返回形态，后续可以把 `mock-api.js` 中的方法替换为若依后端接口。
 
-## Run Locally
+## 本地运行
 
-No build step is required. Serve the repository as static files:
+项目不需要构建步骤，直接以静态文件方式启动即可：
 
 ```bash
 cd iot-map
 python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-Then open:
+启动后访问：
 
-[http://127.0.0.1:4173/](http://127.0.0.1:4173/)
+- 展示端：[http://127.0.0.1:4173/](http://127.0.0.1:4173/)
+- 管理端：[http://127.0.0.1:4173/admin.html](http://127.0.0.1:4173/admin.html)
 
-## Project Structure
+## 项目结构
 
 ```text
 .
-├── app.js                         # Interaction and rendering logic
-├── admin.html                     # RuoYi-style management console
-├── admin.css                      # Management console styles
-├── admin.js                       # Management console CRUD logic
-├── mock-api.js                    # Browser mock API and localStorage persistence
+├── app.js                         # 展示端交互和渲染逻辑
+├── admin.html                     # 若依风格管理端页面
+├── admin.css                      # 管理端样式
+├── admin.js                       # 管理端增删改查逻辑
+├── mock-api.js                    # 模拟 API 和浏览器本地存储
 ├── assets/
-│   └── image-2-floor-plan.svg     # Mock uploaded floor plan image
+│   └── image-2-floor-plan.svg     # 模拟上传的楼层平面图
 ├── data/
-│   └── iot-map.json               # Mock API response
+│   └── iot-map.json               # 初始模拟业务数据
 ├── docs/
-│   ├── open-source-application.md # Codex for Open Source form notes
-│   └── screenshots/               # Project preview screenshots
-├── index.html                     # Static page shell
-├── styles.css                     # Layout and visual system
-├── ROADMAP.md                     # Planned improvements
-├── CHANGELOG.md                   # Release history
-├── CONTRIBUTING.md                # Contribution guide
-├── SECURITY.md                    # Security policy
-├── SUPPORT.md                     # Support notes
-└── CODE_OF_CONDUCT.md             # Community conduct
+│   ├── open-source-application.md # 开源申请说明文案
+│   └── screenshots/               # 项目截图
+├── index.html                     # 展示端页面
+├── styles.css                     # 展示端样式
+├── ROADMAP.md                     # 后续规划
+├── CHANGELOG.md                   # 版本记录
+├── CONTRIBUTING.md                # 贡献说明
+├── SECURITY.md                    # 安全说明
+├── SUPPORT.md                     # 支持说明
+└── CODE_OF_CONDUCT.md             # 社区行为准则
 ```
 
-## Open Source Application Notes
+## 开源申请说明
 
-This repository is an early-stage open-source demo for smart campus and IoT visualization interfaces. It can be used as a reference for:
+这个仓库是一个面向智慧校园和物联网可视化界面的开源演示项目，可以作为以下方向的参考：
 
-- facility map interaction design
-- indoor/outdoor IoT point display
-- mock API driven frontend prototypes
-- campus safety and operations dashboard experiments
+- 场所地图交互设计
+- 室内/户外物联网点位展示
+- 基于模拟 API 的前端原型
+- 校园安全和园区运维看板
+- 若依类管理端与展示端的数据闭环
 
-Suggested application text for Codex for Open Source is available in:
+Codex for Open Source 申请可参考：
 
 [docs/open-source-application.md](docs/open-source-application.md)
 
-## Repository Health
+## 仓库健康度
 
-- MIT licensed
-- Contribution guide included
-- Roadmap and changelog included
-- Security policy included
-- Issue and pull request templates included
+- 使用 MIT 协议开源
+- 已包含贡献说明
+- 已包含路线图和版本记录
+- 已包含安全说明
+- 已包含问题反馈和合并请求模板
 
-## License
+## 开源协议
 
-This project is released under the MIT License.
+本项目基于 MIT 协议开源。
