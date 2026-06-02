@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>物联网地图管理端</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="admin-logo">
+          <span>IoT</span>
+          <strong>地图管理平台</strong>
+        </div>
+        <nav class="admin-menu" aria-label="管理菜单">
+          <button class="is-active" data-module="dashboard" type="button">工作台</button>
+          <button data-module="unit" type="button">单位信息管理</button>
+          <button data-module="places" type="button">场所和楼层管理</button>
+          <button data-module="devices" type="button">设备管理</button>
+          <button data-module="data" type="button">数据源管理</button>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <div>
+            <p>若依风格 / Mock API</p>
+            <h1 id="page-title">工作台</h1>
+          </div>
+          <div class="topbar-actions">
+            <a class="ghost-link" href="./index.html">查看前端地图</a>
+            <button class="primary-button" id="refresh-data" type="button">刷新数据</button>
+          </div>
+        </header>
+
+        <section class="content-shell" id="admin-content" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <dialog class="admin-dialog" id="entity-dialog">
+      <form method="dialog" id="entity-form">
+        <div class="dialog-head">
+          <h2 id="dialog-title">编辑</h2>
+          <button class="icon-close" value="cancel" type="submit" aria-label="关闭">×</button>
+        </div>
+        <div class="dialog-body" id="dialog-body"></div>
+        <div class="dialog-actions">
+          <button class="ghost-button" value="cancel" type="submit">取消</button>
+          <button class="primary-button" id="dialog-save" value="save" type="submit">保存</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./mock-api.js"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>

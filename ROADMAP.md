@@ -11,6 +11,7 @@ This roadmap focuses on turning the demo into a more reusable open-source refere
 - Add screenshots for unit plan, outdoor place, and indoor floor views.
 - Publish the demo through GitHub Pages and link it from the repository homepage.
 - Add the first GitHub release for version `0.1.0`.
+- Add optional RuoYi-Vue + Spring Boot adapters when the demo needs a real database backend.
 
 ## Mid Term
 

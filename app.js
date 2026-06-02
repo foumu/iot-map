@@ -51,22 +51,25 @@ const els = {
   resetView: document.querySelector("#reset-view")
 };
 
-fetch(API_ENDPOINT)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("mock api failed");
-    }
-    return response.json();
-  })
-  .then((data) => {
-    state.data = data;
-    state.activeFloorId = data.places.find((place) => place.type === "indoor")?.floors[0]?.id ?? null;
+loadInitialData();
+
+async function loadInitialData() {
+  try {
+    state.data = window.IotMapApi
+      ? await window.IotMapApi.getData()
+      : await fetch(API_ENDPOINT).then((response) => {
+          if (!response.ok) {
+            throw new Error("mock api failed");
+          }
+          return response.json();
+        });
+    state.activeFloorId = state.data.places.find((place) => place.type === "indoor")?.floors[0]?.id ?? null;
     bindEvents();
     render();
-  })
-  .catch(() => {
+  } catch {
     els.scene.innerHTML = '<div class="load-error">模拟数据加载失败。</div>';
-  });
+  }
+}
 
 function bindEvents() {
   els.viewport.addEventListener("wheel", handleWheel, { passive: false });
@@ -289,7 +292,7 @@ function renderCampusPlanBase() {
 
 function renderPlaceZone(place) {
   const pos = place.position;
-  const footprint = PLACE_FOOTPRINTS[place.id] ?? "8% 8%, 92% 12%, 88% 88%, 12% 92%";
+  const footprint = place.footprint || PLACE_FOOTPRINTS[place.id] || "8% 8%, 92% 12%, 88% 88%, 12% 92%";
   return `
     <button
       class="place-zone ${place.type}"
@@ -311,7 +314,7 @@ function renderIndoorPlanBase(place, floor) {
   const wingClass = place.id === "library" ? "library-layout" : place.id === "teaching-a" ? "teaching-layout" : "lab-layout";
   return `
     <div class="floor-ground ${wingClass}">
-      <img class="floor-plan-image" src="./assets/image-2-floor-plan.svg" alt="${escapeHtml(place.name)} ${escapeHtml(floor.label)} 平面图" />
+      <img class="floor-plan-image" src="${escapeHtml(floor.planUrl || "./assets/image-2-floor-plan.svg")}" alt="${escapeHtml(place.name)} ${escapeHtml(floor.label)} 平面图" />
     </div>
   `;
 }
@@ -415,6 +418,8 @@ function renderDetails() {
           <div><dt>状态</dt><dd class="${selectedDevice.status === "normal" ? "text-normal" : "text-abnormal"}">${STATUS_META[selectedDevice.status].label}</dd></div>
           <div><dt>位置</dt><dd>${escapeHtml(owner.place.name)}${owner.floor ? ` / ${escapeHtml(owner.floor.label)}` : ""}</dd></div>
           <div><dt>编号</dt><dd>${escapeHtml(selectedDevice.id)}</dd></div>
+          <div><dt>型号</dt><dd>${escapeHtml(selectedDevice.model || "-")}</dd></div>
+          <div><dt>维护人</dt><dd>${escapeHtml(selectedDevice.maintainer || "-")}</dd></div>
         </dl>
       </article>
     `;

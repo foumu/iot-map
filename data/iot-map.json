@@ -9,7 +9,11 @@
       "lng": 120.9967,
       "lat": 24.7961
     },
-    "mapProvider": "mock-amap-compatible"
+    "mapProvider": "mock-amap-compatible",
+    "contact": "驻校运维值班室",
+    "contactPhone": "+886-3-571-5131 #33333",
+    "manager": "国立清华大学智慧校园运维组",
+    "status": "enabled"
   },
   "places": [
     {
@@ -17,124 +21,533 @@
       "name": "旺宏馆",
       "type": "indoor",
       "category": "室内场所",
-      "position": { "x": 45, "y": 28, "w": 18, "h": 16 },
+      "position": {
+        "x": 45,
+        "y": 28,
+        "w": 18,
+        "h": 16
+      },
       "floors": [
         {
           "id": "library-b1",
           "label": "B1",
           "name": "旺宏馆 B1",
           "devices": [
-            { "id": "cam-lib-b1-01", "name": "B1 北侧摄像头", "type": "camera", "status": "normal", "x": 34, "y": 38 },
-            { "id": "access-lib-b1-01", "name": "B1 设备间门禁", "type": "access", "status": "abnormal", "x": 72, "y": 64 }
-          ]
+            {
+              "id": "cam-lib-b1-01",
+              "name": "B1 北侧摄像头",
+              "type": "camera",
+              "status": "normal",
+              "x": 34,
+              "y": 38,
+              "code": "CAM-NTHU-1001",
+              "brand": "Hikvision",
+              "model": "DS-2CD7A47EWD",
+              "installDate": "2025-09-01",
+              "maintainer": "校园安全中心",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            },
+            {
+              "id": "access-lib-b1-01",
+              "name": "B1 设备间门禁",
+              "type": "access",
+              "status": "abnormal",
+              "x": 72,
+              "y": 64,
+              "code": "ACS-NTHU-1002",
+              "brand": "ZKTeco",
+              "model": "InBio Pro Plus",
+              "installDate": "2024-11-18",
+              "maintainer": "门禁系统值班室",
+              "lastOnlineAt": "2026-06-01 08:31:20",
+              "remarks": "已生成维修工单，等待现场复核。"
+            }
+          ],
+          "sort": 1,
+          "area": 4200,
+          "planUrl": "./assets/image-2-floor-plan.svg",
+          "status": "enabled"
         },
         {
           "id": "library-1f",
           "label": "1F",
           "name": "旺宏馆 1F",
           "devices": [
-            { "id": "cam-lib-1f-01", "name": "一层大厅摄像头", "type": "camera", "status": "normal", "x": 25, "y": 46 },
-            { "id": "access-lib-1f-01", "name": "正门门禁", "type": "access", "status": "normal", "x": 50, "y": 82 },
-            { "id": "access-lib-1f-02", "name": "西侧门禁", "type": "access", "status": "abnormal", "x": 13, "y": 58 }
-          ]
+            {
+              "id": "cam-lib-1f-01",
+              "name": "一层大厅摄像头",
+              "type": "camera",
+              "status": "normal",
+              "x": 25,
+              "y": 46,
+              "code": "CAM-NTHU-1003",
+              "brand": "Hikvision",
+              "model": "DS-2CD7A47EWD",
+              "installDate": "2025-09-01",
+              "maintainer": "校园安全中心",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            },
+            {
+              "id": "access-lib-1f-01",
+              "name": "正门门禁",
+              "type": "access",
+              "status": "normal",
+              "x": 50,
+              "y": 82,
+              "code": "ACS-NTHU-1004",
+              "brand": "ZKTeco",
+              "model": "InBio Pro Plus",
+              "installDate": "2025-09-01",
+              "maintainer": "门禁系统值班室",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            },
+            {
+              "id": "access-lib-1f-02",
+              "name": "西侧门禁",
+              "type": "access",
+              "status": "abnormal",
+              "x": 13,
+              "y": 58,
+              "code": "ACS-NTHU-1005",
+              "brand": "ZKTeco",
+              "model": "InBio Pro Plus",
+              "installDate": "2024-11-18",
+              "maintainer": "门禁系统值班室",
+              "lastOnlineAt": "2026-06-01 08:31:20",
+              "remarks": "已生成维修工单，等待现场复核。"
+            }
+          ],
+          "sort": 2,
+          "area": 4200,
+          "planUrl": "./assets/image-2-floor-plan.svg",
+          "status": "enabled"
         },
         {
           "id": "library-2f",
           "label": "2F",
           "name": "旺宏馆 2F",
           "devices": [
-            { "id": "cam-lib-2f-01", "name": "二层阅览区摄像头", "type": "camera", "status": "normal", "x": 62, "y": 42 },
-            { "id": "light-lib-2f-01", "name": "二层通道照明", "type": "light", "status": "normal", "x": 41, "y": 35 },
-            { "id": "cam-lib-2f-02", "name": "二层南侧摄像头", "type": "camera", "status": "abnormal", "x": 78, "y": 69 }
-          ]
+            {
+              "id": "cam-lib-2f-01",
+              "name": "二层阅览区摄像头",
+              "type": "camera",
+              "status": "normal",
+              "x": 62,
+              "y": 42,
+              "code": "CAM-NTHU-1006",
+              "brand": "Hikvision",
+              "model": "DS-2CD7A47EWD",
+              "installDate": "2025-09-01",
+              "maintainer": "校园安全中心",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            },
+            {
+              "id": "light-lib-2f-01",
+              "name": "二层通道照明",
+              "type": "light",
+              "status": "normal",
+              "x": 41,
+              "y": 35,
+              "code": "LGT-NTHU-1007",
+              "brand": "DeltaGrid",
+              "model": "SL-2200-NB",
+              "installDate": "2025-09-01",
+              "maintainer": "总务处照明组",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            },
+            {
+              "id": "cam-lib-2f-02",
+              "name": "二层南侧摄像头",
+              "type": "camera",
+              "status": "abnormal",
+              "x": 78,
+              "y": 69,
+              "code": "CAM-NTHU-1008",
+              "brand": "Hikvision",
+              "model": "DS-2CD7A47EWD",
+              "installDate": "2024-11-18",
+              "maintainer": "校园安全中心",
+              "lastOnlineAt": "2026-06-01 08:31:20",
+              "remarks": "已生成维修工单，等待现场复核。"
+            }
+          ],
+          "sort": 3,
+          "area": 4200,
+          "planUrl": "./assets/image-2-floor-plan.svg",
+          "status": "enabled"
         },
         {
           "id": "library-4f",
           "label": "4F",
           "name": "旺宏馆 4F",
           "devices": [
-            { "id": "cam-lib-4f-01", "name": "四层自习区摄像头", "type": "camera", "status": "normal", "x": 30, "y": 32 },
-            { "id": "access-lib-4f-01", "name": "四层档案室门禁", "type": "access", "status": "normal", "x": 69, "y": 47 }
-          ]
+            {
+              "id": "cam-lib-4f-01",
+              "name": "四层自习区摄像头",
+              "type": "camera",
+              "status": "normal",
+              "x": 30,
+              "y": 32,
+              "code": "CAM-NTHU-1009",
+              "brand": "Hikvision",
+              "model": "DS-2CD7A47EWD",
+              "installDate": "2025-09-01",
+              "maintainer": "校园安全中心",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            },
+            {
+              "id": "access-lib-4f-01",
+              "name": "四层档案室门禁",
+              "type": "access",
+              "status": "normal",
+              "x": 69,
+              "y": 47,
+              "code": "ACS-NTHU-1010",
+              "brand": "ZKTeco",
+              "model": "InBio Pro Plus",
+              "installDate": "2025-09-01",
+              "maintainer": "门禁系统值班室",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            }
+          ],
+          "sort": 4,
+          "area": 4200,
+          "planUrl": "./assets/image-2-floor-plan.svg",
+          "status": "enabled"
         }
-      ]
+      ],
+      "buildingNo": "M03",
+      "manager": "图资与资讯处",
+      "area": 16800,
+      "status": "enabled",
+      "remarks": "校内图书资讯与公共学习空间。",
+      "footprint": "10% 16%, 72% 8%, 92% 31%, 82% 78%, 30% 92%, 8% 66%"
     },
     {
       "id": "teaching-a",
       "name": "工程一馆",
       "type": "indoor",
       "category": "室内场所",
-      "position": { "x": 20, "y": 34, "w": 16, "h": 20 },
+      "position": {
+        "x": 20,
+        "y": 34,
+        "w": 16,
+        "h": 20
+      },
       "floors": [
         {
           "id": "teaching-a-1f",
           "label": "1F",
           "name": "工程一馆 1F",
           "devices": [
-            { "id": "access-tea-1f-01", "name": "工程一馆东门门禁", "type": "access", "status": "normal", "x": 78, "y": 53 },
-            { "id": "cam-tea-1f-01", "name": "大厅摄像头", "type": "camera", "status": "normal", "x": 48, "y": 30 }
-          ]
+            {
+              "id": "access-tea-1f-01",
+              "name": "工程一馆东门门禁",
+              "type": "access",
+              "status": "normal",
+              "x": 78,
+              "y": 53,
+              "code": "ACS-NTHU-1011",
+              "brand": "ZKTeco",
+              "model": "InBio Pro Plus",
+              "installDate": "2025-09-01",
+              "maintainer": "门禁系统值班室",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            },
+            {
+              "id": "cam-tea-1f-01",
+              "name": "大厅摄像头",
+              "type": "camera",
+              "status": "normal",
+              "x": 48,
+              "y": 30,
+              "code": "CAM-NTHU-1012",
+              "brand": "Hikvision",
+              "model": "DS-2CD7A47EWD",
+              "installDate": "2025-09-01",
+              "maintainer": "校园安全中心",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            }
+          ],
+          "sort": 1,
+          "area": 6300,
+          "planUrl": "./assets/image-2-floor-plan.svg",
+          "status": "enabled"
         },
         {
           "id": "teaching-a-3f",
           "label": "3F",
           "name": "工程一馆 3F",
           "devices": [
-            { "id": "cam-tea-3f-01", "name": "三层走廊摄像头", "type": "camera", "status": "abnormal", "x": 37, "y": 50 },
-            { "id": "light-tea-3f-01", "name": "三层走廊照明", "type": "light", "status": "normal", "x": 59, "y": 51 }
-          ]
+            {
+              "id": "cam-tea-3f-01",
+              "name": "三层走廊摄像头",
+              "type": "camera",
+              "status": "abnormal",
+              "x": 37,
+              "y": 50,
+              "code": "CAM-NTHU-1013",
+              "brand": "Hikvision",
+              "model": "DS-2CD7A47EWD",
+              "installDate": "2024-11-18",
+              "maintainer": "校园安全中心",
+              "lastOnlineAt": "2026-06-01 08:31:20",
+              "remarks": "已生成维修工单，等待现场复核。"
+            },
+            {
+              "id": "light-tea-3f-01",
+              "name": "三层走廊照明",
+              "type": "light",
+              "status": "normal",
+              "x": 59,
+              "y": 51,
+              "code": "LGT-NTHU-1014",
+              "brand": "DeltaGrid",
+              "model": "SL-2200-NB",
+              "installDate": "2025-09-01",
+              "maintainer": "总务处照明组",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            }
+          ],
+          "sort": 2,
+          "area": 6300,
+          "planUrl": "./assets/image-2-floor-plan.svg",
+          "status": "enabled"
         }
-      ]
+      ],
+      "buildingNo": "E01",
+      "manager": "工学院综合办公室",
+      "area": 12600,
+      "status": "enabled",
+      "remarks": "教学、实验与公共走廊设备密集区域。",
+      "footprint": "18% 5%, 88% 14%, 82% 44%, 100% 54%, 78% 96%, 8% 82%, 14% 47%, 0 36%"
     },
     {
       "id": "lab-center",
       "name": "台达馆",
       "type": "indoor",
       "category": "室内场所",
-      "position": { "x": 67, "y": 42, "w": 16, "h": 18 },
+      "position": {
+        "x": 67,
+        "y": 42,
+        "w": 16,
+        "h": 18
+      },
       "floors": [
         {
           "id": "lab-center-1f",
           "label": "1F",
           "name": "台达馆 1F",
           "devices": [
-            { "id": "access-lab-1f-01", "name": "台达馆入口门禁", "type": "access", "status": "normal", "x": 48, "y": 80 },
-            { "id": "cam-lab-1f-01", "name": "样品间摄像头", "type": "camera", "status": "normal", "x": 32, "y": 36 }
-          ]
+            {
+              "id": "access-lab-1f-01",
+              "name": "台达馆入口门禁",
+              "type": "access",
+              "status": "normal",
+              "x": 48,
+              "y": 80,
+              "code": "ACS-NTHU-1015",
+              "brand": "ZKTeco",
+              "model": "InBio Pro Plus",
+              "installDate": "2025-09-01",
+              "maintainer": "门禁系统值班室",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            },
+            {
+              "id": "cam-lab-1f-01",
+              "name": "样品间摄像头",
+              "type": "camera",
+              "status": "normal",
+              "x": 32,
+              "y": 36,
+              "code": "CAM-NTHU-1016",
+              "brand": "Hikvision",
+              "model": "DS-2CD7A47EWD",
+              "installDate": "2025-09-01",
+              "maintainer": "校园安全中心",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            }
+          ],
+          "sort": 1,
+          "area": 4100,
+          "planUrl": "./assets/image-2-floor-plan.svg",
+          "status": "enabled"
         },
         {
           "id": "lab-center-2f",
           "label": "2F",
           "name": "台达馆 2F",
           "devices": [
-            { "id": "cam-lab-2f-01", "name": "二层公共区摄像头", "type": "camera", "status": "normal", "x": 57, "y": 41 },
-            { "id": "access-lab-2f-01", "name": "危化品库门禁", "type": "access", "status": "abnormal", "x": 75, "y": 35 }
-          ]
+            {
+              "id": "cam-lab-2f-01",
+              "name": "二层公共区摄像头",
+              "type": "camera",
+              "status": "normal",
+              "x": 57,
+              "y": 41,
+              "code": "CAM-NTHU-1017",
+              "brand": "Hikvision",
+              "model": "DS-2CD7A47EWD",
+              "installDate": "2025-09-01",
+              "maintainer": "校园安全中心",
+              "lastOnlineAt": "2026-06-01 10:12:00",
+              "remarks": "运行稳定。"
+            },
+            {
+              "id": "access-lab-2f-01",
+              "name": "危化品库门禁",
+              "type": "access",
+              "status": "abnormal",
+              "x": 75,
+              "y": 35,
+              "code": "ACS-NTHU-1018",
+              "brand": "ZKTeco",
+              "model": "InBio Pro Plus",
+              "installDate": "2024-11-18",
+              "maintainer": "门禁系统值班室",
+              "lastOnlineAt": "2026-06-01 08:31:20",
+              "remarks": "已生成维修工单，等待现场复核。"
+            }
+          ],
+          "sort": 2,
+          "area": 4100,
+          "planUrl": "./assets/image-2-floor-plan.svg",
+          "status": "enabled"
         }
-      ]
+      ],
+      "buildingNo": "D01",
+      "manager": "台达馆联合实验室",
+      "area": 8200,
+      "status": "enabled",
+      "remarks": "实验室与样品间门禁重点管理。",
+      "footprint": "8% 22%, 42% 8%, 90% 12%, 100% 52%, 74% 92%, 22% 84%, 0 58%"
     },
     {
       "id": "sports-field",
       "name": "综合体育馆户外区",
       "type": "outdoor",
       "category": "户外场所",
-      "position": { "x": 57, "y": 65, "w": 28, "h": 18 },
+      "position": {
+        "x": 57,
+        "y": 65,
+        "w": 28,
+        "h": 18
+      },
       "devices": [
-        { "id": "cam-field-01", "name": "体育馆北侧摄像头", "type": "camera", "status": "normal", "x": 62, "y": 67 },
-        { "id": "light-field-01", "name": "跑道 1 号路灯", "type": "light", "status": "normal", "x": 67, "y": 79 },
-        { "id": "light-field-02", "name": "跑道 2 号路灯", "type": "light", "status": "abnormal", "x": 81, "y": 68 }
-      ]
+        {
+          "id": "cam-field-01",
+          "name": "体育馆北侧摄像头",
+          "type": "camera",
+          "status": "normal",
+          "x": 62,
+          "y": 67,
+          "code": "CAM-NTHU-1019",
+          "brand": "Hikvision",
+          "model": "DS-2CD7A47EWD",
+          "installDate": "2025-09-01",
+          "maintainer": "校园安全中心",
+          "lastOnlineAt": "2026-06-01 10:12:00",
+          "remarks": "运行稳定。"
+        },
+        {
+          "id": "light-field-01",
+          "name": "跑道 1 号路灯",
+          "type": "light",
+          "status": "normal",
+          "x": 67,
+          "y": 79,
+          "code": "LGT-NTHU-1020",
+          "brand": "DeltaGrid",
+          "model": "SL-2200-NB",
+          "installDate": "2025-09-01",
+          "maintainer": "总务处照明组",
+          "lastOnlineAt": "2026-06-01 10:12:00",
+          "remarks": "运行稳定。"
+        },
+        {
+          "id": "light-field-02",
+          "name": "跑道 2 号路灯",
+          "type": "light",
+          "status": "abnormal",
+          "x": 81,
+          "y": 68,
+          "code": "LGT-NTHU-1021",
+          "brand": "DeltaGrid",
+          "model": "SL-2200-NB",
+          "installDate": "2024-11-18",
+          "maintainer": "总务处照明组",
+          "lastOnlineAt": "2026-06-01 08:31:20",
+          "remarks": "已生成维修工单，等待现场复核。"
+        }
+      ],
+      "buildingNo": "OUT-02",
+      "manager": "体育室",
+      "area": 23600,
+      "status": "enabled",
+      "remarks": "户外照明和周界视频监控。",
+      "footprint": "4% 34%, 18% 12%, 78% 8%, 96% 28%, 91% 72%, 68% 94%, 16% 82%, 0 58%"
     },
     {
       "id": "east-gate",
       "name": "光复路校门",
       "type": "outdoor",
       "category": "户外场所",
-      "position": { "x": 87, "y": 42, "w": 7, "h": 12 },
+      "position": {
+        "x": 87,
+        "y": 42,
+        "w": 7,
+        "h": 12
+      },
       "devices": [
-        { "id": "cam-gate-01", "name": "光复路校门入口摄像头", "type": "camera", "status": "normal", "x": 89, "y": 46 },
-        { "id": "access-gate-01", "name": "光复路校门车行门禁", "type": "access", "status": "normal", "x": 91, "y": 51 }
-      ]
+        {
+          "id": "cam-gate-01",
+          "name": "光复路校门入口摄像头",
+          "type": "camera",
+          "status": "normal",
+          "x": 89,
+          "y": 46,
+          "code": "CAM-NTHU-1022",
+          "brand": "Hikvision",
+          "model": "DS-2CD7A47EWD",
+          "installDate": "2025-09-01",
+          "maintainer": "校园安全中心",
+          "lastOnlineAt": "2026-06-01 10:12:00",
+          "remarks": "运行稳定。"
+        },
+        {
+          "id": "access-gate-01",
+          "name": "光复路校门车行门禁",
+          "type": "access",
+          "status": "normal",
+          "x": 91,
+          "y": 51,
+          "code": "ACS-NTHU-1023",
+          "brand": "ZKTeco",
+          "model": "InBio Pro Plus",
+          "installDate": "2025-09-01",
+          "maintainer": "门禁系统值班室",
+          "lastOnlineAt": "2026-06-01 10:12:00",
+          "remarks": "运行稳定。"
+        }
+      ],
+      "buildingNo": "G01",
+      "manager": "驻卫警察队",
+      "area": 1800,
+      "status": "enabled",
+      "remarks": "车行门禁和入口视频监控。",
+      "footprint": "22% 0, 76% 8%, 100% 34%, 82% 100%, 22% 92%, 0 54%"
     }
   ]
 }

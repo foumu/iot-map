@@ -7,6 +7,8 @@ All notable changes to this project will be documented here.
 ### Added
 
 - Initial IoT campus map demo.
+- RuoYi-style management console for unit, place, floor, and device CRUD.
+- Browser mock API with localStorage persistence and JSON seed fallback.
 - Simulated unit data for National Tsing Hua University.
 - Unit map, unit plan, indoor floor plan, and outdoor place views.
 - Irregular place footprints based on building-like outlines.

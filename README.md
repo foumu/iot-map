@@ -20,6 +20,8 @@ GitHub Pages 发布后可访问：
 
 ## Features
 
+- RuoYi-style management console for unit, place, floor, and device data
+- Mock API layer backed by browser localStorage with JSON seed fallback
 - Unit-level map centered on a simulated campus: `台湾 国立清华大学`
 - Clickable campus marker and full clickable tooltip area
 - Building-like irregular place footprints instead of fake rectangular blocks
@@ -53,6 +55,21 @@ GitHub Pages 发布后可访问：
 4. If the place is indoor, switch floors from the left floating rail.
 5. View devices on each floor or directly on outdoor places.
 6. Click any device marker to inspect its type, status, and location details.
+
+## Management Console
+
+Open the RuoYi-style management console:
+
+[http://127.0.0.1:4173/admin.html](http://127.0.0.1:4173/admin.html)
+
+Management modules:
+
+- `单位信息管理`: unit name, campus, address, map center, contact, and operating status
+- `场所和楼层管理`: indoor/outdoor places, building-like footprints, floor plan URLs, and floor metadata
+- `设备管理`: cameras, lights, access control devices, status, coordinates, model, maintainer, and online time
+- `数据源管理`: inspect, edit, export, and reset the mock API JSON
+
+The display page and management console both use `mock-api.js`. The seed data comes from `data/iot-map.json`; management changes are stored in the browser local database through `localStorage`.
 
 ## Device Types
 
@@ -97,6 +114,10 @@ Then open:
 ```text
 .
 ├── app.js                         # Interaction and rendering logic
+├── admin.html                     # RuoYi-style management console
+├── admin.css                      # Management console styles
+├── admin.js                       # Management console CRUD logic
+├── mock-api.js                    # Browser mock API and localStorage persistence
 ├── assets/
 │   └── image-2-floor-plan.svg     # Mock uploaded floor plan image
 ├── data/
